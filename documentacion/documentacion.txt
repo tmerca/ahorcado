@@ -1,0 +1,7 @@
+27-11-2023:
+Creado las letras y añadido efectos de letra correcta/incorrecta
+Efectos estéticos (zoom al estar encima de una letra, bordes en la palabra a adivinar...)
+Imprimir tantos guiones como longitud tiene la palabra
+
+Para el siguiente día:
+Como mínimo que nos imprima la letra que hemos clicado si coincide
