@@ -5,3 +5,17 @@ Imprimir tantos guiones como longitud tiene la palabra
 
 Para el siguiente día:
 Como mínimo que nos imprima la letra que hemos clicado si coincide
+
+28-11-2023:
+Añadir la classe 'correcta' si la letra que ha pulsado el cliente coincide para que se ponga verde
+Empezar el pop-up con las normas
+
+Para el siguiente día: 
+Que nos reemplaze el guión por la letra que ha pulsado el cliente si coincide
+
+29-11-2003:
+Terminado el pop-up con las normas 
+
+Para el siguiente día:
+Que nos reemplaze el guión por la letra que ha pulsado el cliente si coincide
+Que se ponga la clase incorrecta en las letras que ha pulsado y no coinciden

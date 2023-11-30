@@ -20,46 +20,68 @@
       <div id="contenedor-palabra">
         <div id="palabra"></div>
       </div>
+    </div>
 
-      <div id="botones">
-        <button value="A" class="letra">A</button>
-        <button value="B" class="letra">B</button>
-        <button value="C" class="letra">C</button>
-        <button value="D" class="letra">D</button>
-        <button value="E" class="letra">E</button>
-        <button value="F" class="letra">F</button>
-        <button value="G" class="letra">G</button>
-        <button value="H" class="letra">H</button>
-        <button value="I" class="letra">I</button>
-        <button value="J" class="letra">J</button>
-        <button value="K" class="letra">K</button>
-        <button value="L" class="letra">L</button>
-        <button value="M" class="letra">M</button>
-        <button value="N" class="letra">N</button>
-        <button value="Ñ" class="letra">Ñ</button>
-        <button value="O" class="letra">O</button>
-        <button value="P" class="letra">P</button>
-        <button value="Q" class="letra">Q</button>
-        <button value="R" class="letra">R</button>
-        <button value="S" class="letra">S</button>
-        <button value="T" class="letra">T</button>
-        <button value="U" class="letra">U</button>
-        <button value="V" class="letra">V</button>
-        <button value="W" class="letra">W</button>
-        <button value="X" class="letra">X</button>
-        <button value="Y" class="letra">Y</button>
-        <button value="Z" class="letra">Z</button>
+    <div id="botones">
+      <button value="A" class="letra">A</button>
+      <button value="B" class="letra">B</button>
+      <button value="C" class="letra">C</button>
+      <button value="D" class="letra">D</button>
+      <button value="E" class="letra">E</button>
+      <button value="F" class="letra">F</button>
+      <button value="G" class="letra">G</button>
+      <button value="H" class="letra">H</button>
+      <button value="I" class="letra">I</button>
+      <button value="J" class="letra">J</button>
+      <button value="K" class="letra">K</button>
+      <button value="L" class="letra">L</button>
+      <button value="M" class="letra">M</button>
+      <button value="N" class="letra">N</button>
+      <button value="Ñ" class="letra">Ñ</button>
+      <button value="O" class="letra">O</button>
+      <button value="P" class="letra">P</button>
+      <button value="Q" class="letra">Q</button>
+      <button value="R" class="letra">R</button>
+      <button value="S" class="letra">S</button>
+      <button value="T" class="letra">T</button>
+      <button value="U" class="letra">U</button>
+      <button value="V" class="letra">V</button>
+      <button value="W" class="letra">W</button>
+      <button value="X" class="letra">X</button>
+      <button value="Y" class="letra">Y</button>
+      <button value="Z" class="letra">Z</button>
+    </div>
+
+    <div id="letrasPulsadas">
+      <div id="contenedor-correctas">
+        <h3>Letras correctas:</h3>
+        <div id="correctas">
+        </div>
+      </div>
+      <div id="contenedor-incorrectas">
+        <h3>Letras incorrectas:</h3>
+        <div id="incorrectas">
+        </div>
       </div>
     </div>
-    <div class="contenedor-instrucciones">
-      <button class="boton-instrucciones">
-        <span class="instrucciones"><strong>Explicación</strong></span>
-      </button>
-      <span class="normas"
-        >Para ganar hay que adivinar la palabra oculta pulsando las letras que
-        creas que formen esta, puedes fallar un total de 7 veces, la siguiente
-        ya se acabó el juego.
-      </span>
+
+    <button id="boton-popup" class="boton-popup">Explicación</button>
+    <div class="envoltorio-popup">
+      <div class="popup">
+        <div class="cerrar-popup">X</div>
+        <div class="contenido-popup">
+          <h4>Las normas son las siguientes:</h4>
+          <p>
+            En el teclado que te ofrecemos en pantalla debes pulsar las letras
+            que creas que contiene la palabra escondida.
+          </p>
+          <p>
+            Por cada acierto se pondrá la letra que has pulsado en su posición.
+          </p>
+          <p>Puedes fallar un máximo de 7 veces, suerte!</p>
+          <a href="#">Entendido!</a>
+        </div>
+      </div>
     </div>
     <script src="script/script.js"></script>
   </body>
