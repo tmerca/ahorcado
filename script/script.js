@@ -1,6 +1,7 @@
 // ARRAY CON PALABRAS/LETRAS
-let palabras = ['PLAYA','SATURNO','GRIETA','ABISMO','LAMENTO'];
+let palabras = ['SATURNO','GRIETA','ABISMO','LAMENTO'];
 let palabraAAdivinar = palabras[Math.floor(Math.random() * palabras.length)];
+let guiones = [];
 
 // CAPTURANDO ELEMENTOS CON EL DOM
 const divBotones = document.getElementById('botones');
@@ -14,9 +15,18 @@ const letrasIncorrectas = document.getElementById('incorrectas');
 
 
 //LLAMADAS A FUNCIONES 
+elegirTematica();
 escribirGuiones();
 compruebaLetra(palabraAAdivinar);
 mostrarPopup();
+
+let respuesta = prompt('Temáticas para jugar: 1 -> Deportes, 2 -> Animales, 3 -> Frutas');
+
+function elegirTematica(respuesta){
+
+    
+
+}
 
 function mostrarPopup() {
 
@@ -37,12 +47,11 @@ function mostrarPopup() {
 
 // FUNCION QUE NOS ESCRIBE TANTOS GUIONES COMO LETRAS TIENE LA PALABRA A ADIVINAR
 function escribirGuiones(){
-    let guiones = "";
 
-    for(i = 1; i <= palabraAAdivinar.length; i++){
-        guiones += "_ ";
+    for(i = 0; i < palabraAAdivinar.length; i++){
+        guiones[i] = "_ ";
     }
-    divPalabra.textContent = guiones;
+    divPalabra.textContent = guiones.join('');
 }
 
 // FUNCION QUE COMPRUEBA QUE LA LETRA PULSADA POR EL CLIENTE ESTÉ EN LA PALABRA A ADIVINAR
@@ -55,15 +64,11 @@ function compruebaLetra(palabra) {
             // Hacemos que si coincide añada la clase correspondiente
             if(e.target.value == palabra[i]) {
                 console.log(e.target.value + " en la posición " + (i + 1));
-                e.target.style= "display: none;";
-                letrasCorrectas.innerHTML = letrasCorrectas.innerHTML + " " + e.target.value;
-            } 
-            if(!e.target.value == palabra[i]){
-                e.target.style= "display: none;";
-                letrasIncorrectas.innerHTML = letrasIncorrectas.innerHTML + " " + e.target.value;
+                e.target.classList.add("correcta");
+
+                // letrasCorrectas.innerHTML = letrasCorrectas.innerHTML + " " + e.target.value;
             }
         }
-
     });
 
 }
