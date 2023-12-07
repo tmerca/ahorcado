@@ -1,0 +1,22 @@
+[
+    {
+        "id" : 1,
+        "palabra" : "MANZANA"
+    },
+    {
+        "id" : 2,
+        "palabra" : "PLATANO"
+    },
+    {
+        "id" : 3,
+        "palabra" : "COCO"
+    },
+    {
+        "id" : 4,
+        "palabra" : "PERA"
+    },
+    {
+        "id" : 5,
+        "palabra" : "GRANADA"
+    }
+]

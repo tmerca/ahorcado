@@ -11,16 +11,15 @@
     <h1>Bienvenido al juego del ahorcado!</h1>
 
     <div class="contenedor-mensaje">
-      <div class="mensaje-intentos">
-        Le quedan <span id="intentos">7</span> intentos
+      <div id="mensaje-intentos" class="mensaje-intentos">
+        Le quedan <span id="intentos"></span> intentos
       </div>
+    </div>
+    <div id="contenedor-mensaje-final">
+      <div id="mensaje-final"></div>
     </div>
 
-    <div class="contenedor">
-      <div id="contenedor-palabra">
-        <div id="palabra"></div>
-      </div>
-    </div>
+    <div id="palabra"></div>
 
     <div id="botones">
       <button value="A" class="letra">A</button>
@@ -52,17 +51,9 @@
       <button value="Z" class="letra">Z</button>
     </div>
 
-    <div id="letrasPulsadas">
-      <div id="contenedor-correctas">
-        <h3>Letras correctas:</h3>
-        <div id="correctas">
-        </div>
-      </div>
-      <div id="contenedor-incorrectas">
-        <h3>Letras incorrectas:</h3>
-        <div id="incorrectas">
-        </div>
-      </div>
+    <div>Letras incorrectas:</div>
+    <div id="letras-incorrectas">
+      
     </div>
 
     <button id="boton-popup" class="boton-popup">Explicación</button>

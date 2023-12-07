@@ -43,35 +43,6 @@ h1 {
     text-align: center;
 }
 
-#letrasPulsadas {
-    width: 1000px;
-    display: flex;
-    justify-content: center;
-}
- 
-#correctas {
-    text-align: center;
-    font-size: 30px;
-}
-
-#letrasPulsadas  h3 {
-    text-align: center;
-}
-
-#contenedor-correctas {
-    border: 2px white solid;
-    height: 300px;
-    width: 400px;
-    margin-right: 40px;
-}
-
-#contenedor-incorrectas {
-    border: 2px white solid;
-    height: 300px;
-    width: 400px;
-    margin-left: 40px;
-}
-
 .letra {
     background-color: #444451;
     color: white;
@@ -89,10 +60,27 @@ h1 {
     text-align: center;
 }
 
+#contenedor-mensaje-final {
+    text-align: center;
+    padding-top: 40px;
+    display: none;
+    width: 400px;
+    height: 70px;
+    font-size: 25px;
+}
+
+#mensaje-final {
+    text-align: center;
+}
+
 #botones {
     width: 600px;
     text-align: center;
     margin-bottom: 30px;
+}
+
+#letras-incorrectas {
+    margin-top: 20px;
 }
 
 .letra.correcta {
@@ -109,7 +97,7 @@ h1 {
 }
 
 #contenedor-palabra {
-    width: 400px;
+    width: 600px;
     height: 150px;
     margin-bottom: 45px;
     display: flex;
@@ -121,6 +109,7 @@ h1 {
 
 #palabra {
     font-size: 60px;
+    margin: 60px 60px;
 }
 
 .boton-popup {
