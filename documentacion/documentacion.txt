@@ -19,3 +19,12 @@ Terminado el pop-up con las normas
 Para el siguiente día:
 Que nos reemplaze el guión por la letra que ha pulsado el cliente si coincide
 Que se ponga la clase incorrecta en las letras que ha pulsado y no coinciden
+
+11-12-2023
+
+El programa ya funciona correctamente (la partida)
+Falta que el cliente elija la temática y guardar nombres y records
+
+Para el siguiente día:
+
+Hacer que el cliente elija temática y elegir una palabra aleatoria de esa temática

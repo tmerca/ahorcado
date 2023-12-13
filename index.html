@@ -9,12 +9,24 @@
   </head>
   <body>
     <h1>Bienvenido al juego del ahorcado!</h1>
-
-    <div class="contenedor-mensaje">
-      <div id="mensaje-intentos" class="mensaje-intentos">
-        Le quedan <span id="intentos"></span> intentos
-      </div>
-    </div>
+    <ul class="listContainers">
+      <li>
+        <div class="contenedor-mensaje">
+          <div id="mensaje-intentos" class="mensaje-intentos">
+            <div>Le quedan <span id="intentos"></span> intentos</div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="contenedor-tiempo">
+          <div id="mensaje-tiempo" class="mensaje-tiempo">
+            <div id="tiempoRestante">Tiempo Transcurrido:</div>
+            <div id="lahora"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    
     <div id="contenedor-mensaje-final">
       <div id="mensaje-final"></div>
     </div>
@@ -51,10 +63,12 @@
       <button value="Z" class="letra">Z</button>
     </div>
 
-    <div>Letras incorrectas:</div>
-    <div id="letras-incorrectas">
-      
-    </div>
+    <div style="font-size: 30px;">Letras incorrectas:</div>
+    <div id="letras-incorrectas"></div>
+
+    <!-- <div>
+        <button id="start">Start</button>
+    </div> -->
 
     <button id="boton-popup" class="boton-popup">Explicación</button>
     <div class="envoltorio-popup">

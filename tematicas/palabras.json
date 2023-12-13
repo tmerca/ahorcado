@@ -1,0 +1,14 @@
+[
+    {
+        "id" : "DEPORTES",
+        "palabras" : ["BALONCESTO", "FUTBOL", "VOLEIBOL", "AJEDREZ", "PADEL"]
+    },
+    {
+        "id" : "ANIMALES",
+        "palabras" : ["PERRO", "GATO", "LORO", "CAMALEON", "PEZ"]
+    },
+    {
+        "id" : "FRUTAS",
+        "palabras" : ["PLATANO", "MANZANA", "LIMON", "NARANJA", "SANDIA"]
+    }
+]
