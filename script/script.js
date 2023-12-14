@@ -1,19 +1,19 @@
 function juego() {
   // VARIABLES
-  let numClicks = 0;
+  let numClicks = 0; // Variable para saber cuando hace el primer click
   let divPalabra = document.getElementById("palabra"); // Palabra en Pantalla
-  let divLetrasFalladas = document.getElementById("letras-incorrectas");
-  let mensajeFinal = document.getElementById("contenedor-mensaje-final");
+  let divLetrasFalladas = document.getElementById("letras-incorrectas"); // Contenedor de las letras incorrectas
+  let mensajeFinal = document.getElementById("contenedor-mensaje-final"); // Mensaje para poner si ha ganado o perdido
   let botones = document.getElementById("botones"); // Div con los botones de las letras
-  let palabras = ["ARBOL", "ARMARIO", "CAMPANA", "PALA"];
+  let palabras = ["ARBOL", "ARMARIO", "CAMPANA", "PALA"]; // Array con palabras 
   let guiones = []; // Palabra aleatoria en "_"
   let letrasFalladas = []; // Letras que falla durante la partida
   let palabraAAdivinar = palabras[Math.floor(Math.random() * palabras.length)]; // Palabra aleatoria del array
-  let palabraElegida = palabraAAdivinar;
+  let palabraElegida = palabraAAdivinar; // Copia de la variable para operar sobre esta
   let adivinada = true; // Palabra adivinada o no
-  let vidas = document.getElementById("intentos");
+  let vidas = document.getElementById("intentos"); // Variable para ir disminuyendo el numero de intentos
   let letraNoEncontrada = true; // Para comprobar si está en letrasFalladas[]
-  vidas.innerHTML = 7;
+  vidas.innerHTML = 7; // Numero de intentos que damos al cliente
 
   // VARIABLES PARA EL CRONÓMETRO
   let elCrono;
@@ -65,31 +65,27 @@ function juego() {
   function startCrono() {
     elCrono = setInterval(crono, 1000);
   }
-
-  
   function stopCrono() {
     clearInterval(elCrono);
   }
   
-  function reset() {
-    setTimeout(reiniciarCrono, 1000);
-  }
+  // function reset() {
+  //   setTimeout(reiniciarCrono, 1000);
+  // }
   
   // window.addEventListener("load", start);
   
-  // CONSTANTES
+  // POP-UP
   const botonPopup = document.querySelector(".boton-popup");
   const envoltorioPopup = document.querySelector(".envoltorio-popup");
   const cerrarPopup = document.querySelector(".cerrar-popup");
-  const divLetra = document.querySelectorAll(
-    ".letra:not(.incorrecta, .correcta)"
-  );
 
   crearEspacios();
   cambiarEspacios();
   mostrarPopup();
 
-  function mostrarPopup() {
+  function mostrarPopup() { //FUNCION CON EVENTOS PARA MOSTRAR EL POP-UP
+    
     botonPopup.addEventListener("click", () => {
       envoltorioPopup.style.display = "block";
     });
@@ -103,18 +99,21 @@ function juego() {
     });
   }
 
+  // FUNCION PARA ESCRIBIR LOS GUIONES EN PANTALLA
   function crearEspacios() {
     for (let i = 0; i < palabraElegida.length; i++) {
       guiones[i] = "__";
     }
   }
 
+  // FUNCION PARA CAMBIAR EL GUION POR LA LETRA EN CASO DE QUE SEA CORRECTA
   function cambiarEspacios() {
     for (let i = 0; i < palabraElegida.length; i++) {
       divPalabra.innerHTML = divPalabra.innerHTML + " " + guiones[i];
     }
   }
 
+  // FUNCION PARA COMPROBAR SI LA LETRA COINCIDE
   function comprobarLetra(letra) {
     for (let i = 0; i < palabraElegida.length; i++) {
       if (letra == palabraElegida.charAt(i)) {
@@ -122,6 +121,7 @@ function juego() {
         letraNoEncontrada = false;
       }
     }
+    // SI NO FUNCIONA AÑADE ESA LETRA EN EL CONTENEDOR DE LETRAS INCORRECTAS
     if (letraNoEncontrada == true) {
       letrasFalladas[letrasFalladas.length] = " " + letra;
       vidas.innerHTML = vidas.innerHTML - 1;
@@ -135,6 +135,7 @@ function juego() {
     adivinada = true;
   }
 
+  // FUNCION PARA COMPROBAR SI HA ADIVINADO LA PALABRA ENTERA MUESTRE EL MENSAJE O SI SE QUEDA SIN INTENTOS
   function compruebaAcierto() {
     for (let i = 0; i < palabraElegida.length; i++) {
       if (guiones[i].toUpperCase() != palabraElegida.charAt(i)) {
@@ -148,7 +149,7 @@ function juego() {
       mensajeFinal.style.display = "block";
       botones.style.display = "none";
     }
-    if (vidas.innerHTML == 0) {
+    if (vidas.innerHTML == 0) { //COMPROBACION QUE SI TIENE 0 VIDAS SE PARE EL CRONÓMETRO 
       stopCrono();      
       botones.style.display = "none";
       mensajeFinal.innerHTML =
@@ -157,6 +158,7 @@ function juego() {
     }
   }
 
+  // EVENTO PARA QUE CUANDO HAGA EL PRIMER CLICK EMPIECE A SUBIR EL TIEMPO 
   botones.addEventListener(
     "click",
     (e) => {
